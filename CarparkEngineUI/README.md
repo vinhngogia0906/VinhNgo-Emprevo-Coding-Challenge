@@ -1,6 +1,6 @@
 # VinhNgoEmprevoChallengeCarparkEngineUI
 
-Welcome to Emprevo Carpark Engine UI Application.
+Welcome to the Emprevo Carpark Engine UI Application.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.4 and serves as the frontend application for [CarparkEngine App](https://github.com/vinhngogia0906/VinhNgo-Emprevo-Coding-Challenge/tree/main/CarparkEngine)
 
 Again, I invited myself to use GraphQL API instead of REST to communicate with the backend application, because why not?
