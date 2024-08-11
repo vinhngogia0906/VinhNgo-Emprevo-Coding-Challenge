@@ -1,0 +1,41 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the form content horizontally */
+  justify-content: center; /* Centers the form content vertically */
+  gap: 16px; /* Adds space between the form fields and button */
+  width: 100%;
+  max-width: 400px; /* Optional: Limits the form width */
+  margin: 0 auto; /* Centers the form container on the page */
+  padding: 20px; /* Optional: Adds padding around the form */
+}
+
+.form-field {
+  width: 100%;
+}
+
+.submit-button {
+  width: 60%;
+  padding: 16px 24px;
+  font-size: 18px;
+  background-color: #90EE90;
+  color: #160202;
+  border-radius: 15px;
+  text-transform: none;
+}
+
+.datetime-picker {
+  display: flex;
+  align-items: center;
+}
+
+.time-picker {
+  width: 20em;
+  margin-left: 1em;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
