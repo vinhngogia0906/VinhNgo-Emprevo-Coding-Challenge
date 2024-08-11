@@ -45,7 +45,7 @@ namespace CarparkEngine.Tests
 
         [Theory]
         [InlineData("2024-08-08 00:00:00", "2024-08-08 01:00:00", 5.0)]   // Standard Rate (1 hour)
-        [InlineData("2024-08-08 03:00:00", "2024-08-08 05:00:00", 10.0)]  // Standard Rate (2 hours)
+        [InlineData("2024-08-01 02:00:00", "2024-08-01 03:40:00", 10.0)]  // Standard Rate (2 hours)
         [InlineData("2024-08-06 10:00:00", "2024-08-07 17:30:00", 40.0)]  // Standard Rate (2 days)
         public void CalculatePrice_ShouldReturnCorrectPriceForStandardRate(string entryTime, string exitTime, float expectedPrice)
         {
