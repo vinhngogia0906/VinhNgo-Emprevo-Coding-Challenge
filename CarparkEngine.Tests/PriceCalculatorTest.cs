@@ -29,7 +29,7 @@ namespace CarparkEngine.Tests
 
 
         [Theory]
-        [InlineData("2024-08-09 03:01:00", "2024-08-09 22:59:59", 10.0)] // Weekend Rate (Saturday)
+        [InlineData("2024-08-10 03:01:00", "2024-08-10 22:59:59", 10.0)] // Weekend Rate (Saturday)
         [InlineData("2024-08-10 01:00:00", "2024-08-10 22:59:59", 10.0)] // Weekend Rate (Sunday)
         public void CalculatePrice_ShouldReturnCorrectPriceForWeekendRate(string entryTime, string exitTime, float expectedPrice)
         {
@@ -45,8 +45,8 @@ namespace CarparkEngine.Tests
 
         [Theory]
         [InlineData("2024-08-08 00:00:00", "2024-08-08 01:00:00", 5.0)]   // Standard Rate (1 hour)
-        [InlineData("2024-08-08 03:00:00", "2024-08-08 05:00:00", 10.0)]  // Standard Rate (2 hours)
-        [InlineData("2024-08-08 07:00:00", "2024-08-09 07:00:00", 40.0)]  // Standard Rate (2 days)
+        [InlineData("2024-08-01 02:00:00", "2024-08-01 03:40:00", 10.0)]  // Standard Rate (2 hours)
+        [InlineData("2024-08-06 10:00:00", "2024-08-07 17:30:00", 40.0)]  // Standard Rate (2 days)
         public void CalculatePrice_ShouldReturnCorrectPriceForStandardRate(string entryTime, string exitTime, float expectedPrice)
         {
             // Arrange
