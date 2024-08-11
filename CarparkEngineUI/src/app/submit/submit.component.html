@@ -1,0 +1,61 @@
+<br/>
+<p>Select the ticket entry and exit time to get the total payable price</p>
+<br/>
+<form (ngSubmit)="onSubmit()" [formGroup]="dateForm">
+  <div class="datetime-picker">
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Entry Date</mat-label>
+      <input matInput [matDatepicker]="entryPicker" formControlName="entryDate">
+      <mat-datepicker-toggle matSuffix [for]="entryPicker"></mat-datepicker-toggle>
+      <mat-datepicker #entryPicker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-field time-picker">
+      <mat-label>Entry Hour</mat-label>
+      <mat-select formControlName="entryHour">
+        @for (hour of hours; track hour) {
+          <mat-option [value]="hour.value">{{hour.viewValue}}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-field time-picker">
+      <mat-label>Entry Minute</mat-label>
+      <mat-select formControlName="entryMinute">
+        @for (minute of minutes; track minute) {
+          <mat-option [value]="minute.value">{{minute.viewValue}}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+  </div>
+
+  <div class="datetime-picker">
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Exit Date</mat-label>
+      <input matInput [matDatepicker]="exitPicker" formControlName="exitDate">
+      <mat-datepicker-toggle matSuffix [for]="exitPicker"></mat-datepicker-toggle>
+      <mat-datepicker #exitPicker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-field time-picker">
+      <mat-label>Exit Hour</mat-label>
+      <mat-select formControlName="exitHour">
+        @for (hour of hours; track hour) {
+          <mat-option [value]="hour.value">{{hour.viewValue}}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-field time-picker">
+      <mat-label>Exit Minute</mat-label>
+      <mat-select formControlName="exitMinute">
+        @for (minute of minutes; track minute) {
+          <mat-option [value]="minute.value">{{minute.viewValue}}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <button mat-raised-button color="primary" type="submit" class="submit-button" [disabled]="dateForm.invalid">Submit</button>
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+</form>

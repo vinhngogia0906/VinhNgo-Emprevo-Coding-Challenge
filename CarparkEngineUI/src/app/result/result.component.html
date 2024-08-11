@@ -1,0 +1,8 @@
+<div>
+  <br/>
+  <h6>Your ticket session: {{ data.submitTicket.id }}</h6>
+  <pre>Entry Time: {{ data.submitTicket.entry }}</pre>
+  <pre>Exit Time: {{ data.submitTicket.exit }}</pre>
+  <pre>Total payable price: {{ data.submitTicket.totalPrice }}</pre>
+  <button (click)="submitAnotherTicket()" class="submit-button">Submit another Ticket</button>
+</div>
